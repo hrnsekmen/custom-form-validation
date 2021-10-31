@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --main-bg-color: #CAB8FF;
+  --bg-header: #9682d0;
+  --c-white: #fff;
+  --f-size: 50px;
+  --c-btn-bg: #CAB8FF;
+  --c-btn--bg-hover: #9682d0;
+  --color-success: #2ecc71;
+  --color-error: #e74c3c;
+  --c-border-header: #9682d0;
+  --box-shadow:box-shadow: 0 0 50px #ccc;
+  --ff: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --transition: all 0.3s;
+  --spacing: 4px;
+  --radius: 5px;
+}
+input:focus {
+  outline-color: var(--main-bg-color);
+}
+body {
+  background-color: var(--main-bg-color);
+  font-family: var(--ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+/* SUCCESS DIV */
+.success-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: var(--c-white);
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  width: 600px;
+  max-width: 100%;
+}
+.success-container h2 {
+  color: var(--color-success);
+}
+.success-container i.fa-check-circle {
+  color: var(--color-success);
+  font-size: 50px;
+}
+/* END OF SUCCESS DIV */
+
+/* FORM BTN */
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: var(--c-white);
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+  width: 700px;
+  max-width: 100%;
+}
+/* END OF FORM BTN */
+.btn-container button {
+  background-color: var(--c-btn-bg);
+  border: 2px solid var(--c-btn-bg);
+  border-radius: var(--radius);
+  color: var(--c-white);
+  font-family: inherit;
+  font-size: 16px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.btn-container button:hover {
+  background-color: var(--c-btn--bg-hover);
+  border-color: var(--c-btn--bg-hover);
+}
+
+/* END OF FORM BTN */
+.container {
+  background-color: var(--c-white);
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  width: 600px;
+  max-width: 100%;
+  
+}
+.container .header {
+  border-bottom: 1px solid var(--c-border-header);
+  background-color: var(--bg-header);
+  padding: 20px 40px;
+}
+.container .header h2 {
+  margin: 0;
+  color: var(--c-white);
+  text-align: center;
+  letter-spacing: var(--spacing);
+}
+.container .form {
+  padding: 30px 40px;
+}
+.container .form .form-item {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.container .form .form-item.success input {
+  border-color: var(--color-success);
+}
+.container .form .form-item.error input {
+  border-color: var(--color-error);
+}
+.container .form .form-item label {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: var(--bg-header);
+}
+.container .form .form-item input {
+  border: 2px solid #f0f0f0;
+  border-radius: var(--radius);
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+.container .form .form-item i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+.container .form .form-item.success i.fa-check-circle {
+  color: var(--color-success);
+  visibility: visible;
+}
+.container .form .form-item.error i.fa-exclamation-circle {
+  color: var(--color-error);
+  visibility: visible;
+}
+.container .form .form-item small {
+  color: var(--color-error);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+.container .form .form-item.error small {
+  color: var(--color-error);
+  visibility: visible;
+}
+.container .form button {
+  background-color: var(--main-bg-color);
+  border: 2px solid var(--main-bg-color);
+  border-radius: var(--radius);
+  color: var(--c-white);
+  display: block;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.container .form button:hover {
+  background-color: var(--c-btn--bg-hover);
+  border-color: var(--c-btn--bg-hover);
+}
